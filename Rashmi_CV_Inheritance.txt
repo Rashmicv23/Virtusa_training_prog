@@ -1,0 +1,88 @@
+public class Train implements Ivehicl, IpublicTrans{
+
+	@Override
+	public void drive() {
+		// TODO Auto-generated method stub
+		System.out.println("The train is turning left etc");
+		
+	}
+
+	@Override
+	public void turnLeft() {
+		// TODO Auto-generated method stub
+		System.out.println("The train is turning left etc");
+	}
+
+	@Override
+	public void brake() {
+		// TODO Auto-generated method stub
+		System.out.println("The train is turning left etc");
+	}
+
+	@Override
+	public void getNumberOfpep() {
+		// TODO Auto-generated method stub
+		System.out.println("The train is turning left etc");
+	}
+
+}
+
+public class Car extends MotorisedVechicle implements Ivehicl {
+
+	@Override
+	public void drive() {
+		// TODO Auto-generated method stub
+		System.out.println("the car is in the brake mode etc");
+		
+	}
+
+	@Override
+	public void turnLeft() {
+		// TODO Auto-generated method stub
+		System.out.println("the car is in the brake mode etc");
+	}
+
+	@Override
+	public void brake() {
+		// TODO Auto-generated method stub
+		System.out.println("the car is in the brake mode etc");
+	}
+	
+
+}
+
+public class MotorisedVechicle {
+
+	
+	void checkMotor(){
+		System.out.println("the motor of  the vechicle is in good condition");
+	}
+
+}
+
+public interface Ivehicl {
+	void drive();
+	void turnLeft();
+	void brake();
+
+}
+
+public interface IpublicTrans {
+void getNumberOfpep();
+}
+
+public class test {
+public static void main(String[] args) {
+	Ivehicl  c=new Car();
+	c.drive();
+	c.turnLeft();
+	c.brake();
+	Ivehicl  t=new Train();
+	t.drive();
+	t.turnLeft();
+	t.brake();
+	IpublicTrans i=new Train();
+	i.getNumberOfpep();
+	
+}
+}
